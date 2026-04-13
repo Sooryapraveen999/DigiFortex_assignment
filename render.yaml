@@ -7,15 +7,8 @@ services:
     startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: DATABASE_URL
-        fromDatabase:
-          name: brandguard-db
-          property: connectionString
+        value: postgresql+psycopg2://neondb_owner:npg_USr1i4LdjFGK@ep-aged-recipe-anw0usw4-pooler.c-6.us-east-1.aws.neon.tech/neondb?sslmode=require
       - key: NEWS_API_KEY
         sync: false
       - key: SERPAPI_API_KEY
         sync: false
-
-databases:
-  - name: brandguard-db
-    databaseName: brand_monitoring
-    user: brandguard_user
