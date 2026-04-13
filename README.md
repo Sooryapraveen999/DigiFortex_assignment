@@ -42,8 +42,6 @@ BrandGuard provides real-time monitoring of brand mentions, detects potential im
 
 ### Authentication & Security
 - **Basic authentication**: Simple login system with hardcoded credentials
-  - Email: `admin@brandguard.com`
-  - Password: `admin123`
 - **Session management**: Uses localStorage for authentication state persistence
 - **Route protection**: Protected routes for dashboard, scan, and history pages
 - **Logout functionality**: Secure logout with session clearing and redirection
@@ -66,7 +64,6 @@ BrandGuard provides real-time monitoring of brand mentions, detects potential im
 - **Responsive layout**: Works across desktop and mobile devices
 - **Intuitive navigation**: Sidebar-based navigation with clear route indicators
 - **Visual indicators**: Color-coded badges for risk levels and verification status
-- **Accessibility**: Semantic HTML and keyboard navigation support
 
 ## Architecture
 
@@ -144,8 +141,6 @@ Assignment/
 - Python 3.13 or higher
 - Node.js 18 or higher
 - PostgreSQL database
-- NewsAPI key (optional, for real data)
-- SerpAPI key (optional, for real data)
 
 ### Backend Setup
 
@@ -166,14 +161,8 @@ Assignment/
    pip install -r requirements.txt
    ```
 
-4. **Configure environment variables**
-   Create a `.env` file in the backend directory:
-   ```env
-   DATABASE_URL=postgresql+psycopg2://postgres:postgres@localhost:5432/brand_monitoring
-   NEWS_API_KEY=your_newsapi_key_here
-   SERPAPI_API_KEY=your_serpapi_key_here
-   ```
-   Or use the provided `.env.example` as a template.
+4. **Set up environment variables**
+   Create a `.env` file in the backend directory with your database URL and API keys.
 
 5. **Run the backend server**
    ```bash
@@ -194,13 +183,7 @@ Assignment/
    npm install
    ```
 
-3. **Configure environment variables** (optional)
-   Create a `.env.local` file in the frontend directory:
-   ```env
-   NEXT_PUBLIC_API_URL=http://localhost:8000
-   ```
-
-4. **Run the development server**
+3. **Run the development server**
    ```bash
    npm run dev
    ```
@@ -285,11 +268,7 @@ Health check endpoint.
 
 ## Authentication
 
-The application uses a basic authentication system for demonstration purposes:
-
-**Login Credentials:**
-- Email: `admin@brandguard.com`
-- Password: `admin123`
+The application uses a basic authentication system for demonstration purposes with localStorage-based session management.
 
 **Protected Routes:**
 - `/dashboard` - Main dashboard with metrics and recent activity
@@ -396,11 +375,3 @@ For production deployment, ensure:
 - **API Rate Limiting**: Implement rate limiting for external API calls
 - **Caching Layer**: Add Redis caching for improved performance
 - **User Management**: Multi-user support with role-based access control
-
-## License
-
-This project is developed for educational and demonstration purposes.
-
-## Contact
-
-For questions or feedback, please refer to the project repository.
