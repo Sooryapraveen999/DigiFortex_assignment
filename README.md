@@ -2,6 +2,11 @@
 
 A comprehensive full-stack brand monitoring and risk detection system that identifies brand misuse, domain impersonation, and reputational risks across multiple sources.
 
+## Live Deployments
+
+- **Frontend**: [https://digi-fortex-assignment-nqkvfzt36.vercel.app/](https://digi-fortex-assignment-nqkvfzt36.vercel.app/)
+- **Backend**: [https://digifortex-assignment.onrender.com/](https://digifortex-assignment.onrender.com/)
+
 ## Overview
 
 BrandGuard provides real-time monitoring of brand mentions, detects potential impersonation attempts, and delivers AI-powered risk analysis to help organizations protect their brand reputation. The system aggregates data from news sources and search engines, classifies findings by risk level, and provides actionable insights through an intuitive dashboard.
